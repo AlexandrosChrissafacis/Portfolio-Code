@@ -6,6 +6,7 @@ import {MainComponent} from "./sections/main/main.component";
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'projects/:id', component: ProjectDetailComponent },
+  {path: '**', redirectTo: ''}
 ];
 @NgModule({
   imports: [

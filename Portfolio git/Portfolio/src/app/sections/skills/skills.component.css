@@ -209,3 +209,19 @@ small {
   }
 }
 
+@media (hover: none) {
+  .tab:hover {
+    background-image: none;
+  }
+
+  .skill:hover {
+    transform: none;
+  }
+
+  .column ul li:hover {
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+  }
+}
+

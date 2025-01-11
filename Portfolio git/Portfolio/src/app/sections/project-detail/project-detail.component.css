@@ -213,9 +213,8 @@ mat-button {
 
 @media (max-width: 768px) {
   .project-detail {
-    height: 100%;
+    height: 100vh;
     background-color: transparent;
-
   }
 
   .project-detail-container {
@@ -330,3 +329,12 @@ mat-button {
   }
 }
 
+@media (hover: none) {
+  .technologies-list li:hover {
+    background-image: none;
+  }
+
+  .carousel:hover {
+    transform: none;
+  }
+}

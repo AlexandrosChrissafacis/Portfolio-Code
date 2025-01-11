@@ -120,3 +120,9 @@
     gap: 10px;
   }
 }
+
+@media (hover: none) {
+  .profile-image:hover, a:hover {
+    transform: none;
+  }
+}

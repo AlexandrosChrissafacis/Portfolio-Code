@@ -2,6 +2,7 @@
   height: 100%;
   background-color: #3c007d;
   width: 100%;
+  margin-top: 64px
 }
 
 mat-toolbar {
@@ -23,9 +24,17 @@ mat-button {
   background-image: linear-gradient(to right, #ff0080, #8e2de2);
 }
 
+#landscape-lock {
+  display: none;
+}
+
 
 
 @media (max-width: 768px) {
+  #body {
+    margin-top: 0;
+  }
+
   mat-toolbar {
     flex-direction: column;
     align-items: center;
@@ -60,5 +69,36 @@ mat-button {
 
   mat-button {
     font-size: 0.8rem;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  #landscape-lock {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #320064;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 9999;
+  }
+
+  #body {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 1000px) {
+  #landscape-lock {
+    display: none;
+  }
+
+  #body {
+    display: block;
   }
 }
