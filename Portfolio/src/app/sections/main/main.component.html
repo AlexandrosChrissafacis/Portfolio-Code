@@ -1,0 +1,50 @@
+<div id="navbar">
+  <div id="iconHeader" style="flex: 0 0 10vw; ">
+    <h1 id="AC">&lt;AC/&gt;</h1>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="toolbar">
+    <mat-toolbar color="primary" class="navbar">
+      <div class="large-screen-only">
+        <a mat-button href="#home">Home</a>
+        <a mat-button href="#about">About</a>
+        <a mat-button href="#skills">Skills</a>
+        <a mat-button href="#projects">Projects</a>
+        <a mat-button href="#contact">Contact</a>
+      </div>
+
+      <div class="small-screen-only">
+        <button class="menu-button" (click)="toggleMenu()">&#9776;</button>
+        <div [class.hidden]="!menuOpen"  class="menu-links">
+          <a mat-button href="#home">Home</a>
+          <a mat-button href="#about">About</a>
+          <a mat-button href="#skills">Skills</a>
+          <a mat-button href="#projects">Projects</a>
+          <a mat-button href="#contact">Contact</a>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
+
+
+<div id="body">
+  <div id="home" class="section">
+    <app-home></app-home>
+  </div>
+  <div id="about" class="section">
+    <app-about></app-about>
+  </div>
+  <div id="skills" class="section">
+    <app-skills></app-skills>
+  </div>
+  <div id="projects" class="section">
+    <app-projects></app-projects>
+  </div>
+  <div id="contact" class="section">
+    <app-contact></app-contact>
+  </div>
+</div>
+

@@ -1,0 +1,117 @@
+<h1 class="skills-header">My Skills</h1>
+
+<div class="tab-complete">
+  <div class="tabs">
+    <button type="button" [class.active]="isActiveTab('TECH')" class="tab" (click)="changeTab('TECH')">Technical
+      Skills
+    </button>
+    <button type="button" [class.active]="isActiveTab('PERS')" class="tab" (click)="changeTab('PERS')">Personal Skills
+    </button>
+  </div>
+
+  <div *ngIf="selectedTab == 'TECH'" class="tab-content">
+    <div class="skills-section">
+      <h2>Programming Languages</h2>
+
+      <div class="skills">
+        <div class="skill">
+          <h3>C#</h3>
+          <input class="slider80" type="range" value="80" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>ASP.NET</li>
+            <li>Entity Framework core</li>
+            <li>Maui</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>Java</h3>
+          <input class="slider80" type="range" value="80" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>Spring Boot</li>
+            <li>Hibernate</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <input class="slider80" type="range" value="80" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>Vue.js</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>TypeScript</h3>
+          <input class="slider80" type="range" value="80" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>Angular</li>
+            <li>React</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>HTML/CSS</h3>
+          <input class="slider80" type="range" value="80" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>Bootstrap</li>
+            <li>SCSS</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>PHP</h3>
+          <input class="slider60" type="range" value="60" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+            <li>Symfony</li>
+          </ul>
+        </div>
+
+        <div class="skill">
+          <h3>Python</h3>
+          <input class="slider60" type="range" value="60" disabled>
+          <h4>Frameworks & Tools</h4>
+          <ul>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedTab == 'PERS'" class="tab-content">
+    <div class="skills-section personal-skills">
+      <div class="column key-traits">
+        <h2>Key Traits</h2>
+        <ul>
+          <li>Continuous Learner</li>
+          <li>Problem-Solving</li>
+          <li>Attention to Detail</li>
+          <li>Team Player</li>
+          <li>Time Management</li>
+          <li>Creativity</li>
+          <li>Adaptability</li>
+        </ul>
+      </div>
+
+      <div class="column interests">
+        <h2>Interests</h2>
+        <ul>
+          <li>Cooking</li>
+          <li>Drone Flying</li>
+          <li>Gaming</li>
+          <li>Driving</li>
+          <li>Social Activities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

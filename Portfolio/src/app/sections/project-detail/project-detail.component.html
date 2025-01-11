@@ -1,0 +1,66 @@
+<div class="project-detail">
+  <div id="navbar" >
+    <div id="iconHeader" style="flex: 0 0 10vw; ">
+      <h1 id="AC">&lt;AC/&gt;</h1>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="toolbar">
+      <mat-toolbar color="primary" class="navbar">
+        <div class="large-screen-only">
+          <a mat-button (click)="navigateToMain('home')">Home</a>
+          <a mat-button (click)="navigateToMain('about')">About</a>
+          <a mat-button (click)="navigateToMain('skills')">Skills</a>
+          <a mat-button (click)="navigateToMain('projects')">Projects</a>
+          <a mat-button (click)="navigateToMain('contact')">Contact</a>
+        </div>
+
+        <div class="small-screen-only">
+          <button class="menu-button" (click)="toggleMenu()">&#9776;</button>
+          <div [class.hidden]="!menuOpen"  class="menu-links">
+            <a mat-button (click)="navigateToMain('home')">Home</a>
+            <a mat-button (click)="navigateToMain('about')">About</a>
+            <a mat-button (click)="navigateToMain('skills')">Skills</a>
+            <a mat-button (click)="navigateToMain('projects')">Projects</a>
+            <a mat-button (click)="navigateToMain('contact')">Contact</a>
+          </div>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+
+  <div class="project-detail-container">
+    <div class="project-detail-left">
+      <div class="project-title-container">
+        <h1 class="project-title">{{ project.title }}</h1>
+      </div>
+      <div class="project-description-container">
+        <p class="project-description">{{ project.description }}</p>
+      </div>
+    </div>
+
+    <div class="project-detail-right">
+      <div class="carousel">
+        <img
+          *ngFor="let image of project.images; let i = index"
+          [src]="image"
+          [class.active]="i === currentSlide"
+          (click)="openModal()"
+        />
+        <button class="carousel-button left" (click)="prevSlide()">&larr;</button>
+        <button class="carousel-button right" (click)="nextSlide()">&rarr;</button>
+      </div>
+      <h2 style="color: white">Technologies Used</h2>
+      <ul class="technologies-list">
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <img [src]="modalImage" alt="Full-size image" style="object-fit: scale-down;"/>
+    </div>
+  </div>
+</div>

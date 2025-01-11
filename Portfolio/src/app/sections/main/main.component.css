@@ -1,0 +1,159 @@
+#body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+#AC {
+  color: white;
+  margin-left: 30px
+}
+
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#home, #about, #skills, #projects, #contact {
+  text-align: center;
+}
+
+mat-toolbar {
+  background-color: #320064;
+  color: white;
+}
+
+mat-button {
+  color: white;
+}
+
+.section {
+  background-color: #3c007d;
+
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #ff0080, #8e2de2) 1;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-image: linear-gradient(to right, #ff0080, #8e2de2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-links {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.small-screen-only {
+  display: none;
+}
+
+.spacer {
+  flex-grow: 1;
+  width: 70vw;
+}
+
+.toolbar {
+  flex: 1 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  mat-button {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  #body {
+    padding: 0;
+    width: 100%;
+  }
+
+  .section {
+    padding: 50px 15px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: #320064;
+    border: 1px solid #3c007d;
+  }
+
+  .small-screen-only {
+    display: block;
+  }
+
+  .large-screen-only {
+    display: none;
+  }
+
+  .spacer {
+    flex-grow: 1;
+    width: 0;
+  }
+
+  .toolbar {
+    flex: 0;
+    right: 0;
+  }
+
+  #navbar {
+    width: 100%
+  }
+}
+
+@media (max-width: 480px) {
+  mat-button {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 40px 10px;
+  }
+
+  #iconHeader h1 {
+    margin-left: 10px;
+  }
+}
+

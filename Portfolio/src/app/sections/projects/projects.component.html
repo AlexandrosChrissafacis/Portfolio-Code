@@ -1,0 +1,36 @@
+<div class="projects-container">
+  <h1 class="projects-header">My Projects</h1>
+
+  <div class="carousel-navigation">
+
+    <button class="carousel-button left" (click)="showPreviousProjects()">
+      &larr;
+    </button>
+
+    <div [class.visible]="animate" class="projects-cards" (swipeleft)="onSwipeLeft()"
+         (swiperight)="onSwipeRight()">
+      <div
+        class="project-card"
+        *ngFor="let project of currentProjects"
+        (mouseenter)="onHoverStart()"
+        (mouseleave)="onHoverEnd()"
+        (click)="navigateToDetail(project.id)"
+        style="cursor: pointer;"
+      >
+        <img [src]="project.images[0]" alt="{{ project.title }}" class="project-image" />
+        <div class="project-info">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description | slice: 0:50 }}...</p>
+          <div class="technologies">
+            <span *ngFor="let tech of project.technologies.slice(0,6)" class="tech-tag">{{ tech }}</span>
+            <span *ngIf="project.technologies.length > 6" class="tech-tag">{{ '...' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-button right" (click)="showNextProjects()">
+      &rarr;
+    </button>
+  </div>
+</div>

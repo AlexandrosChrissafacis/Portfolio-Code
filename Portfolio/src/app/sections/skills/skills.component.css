@@ -1,0 +1,211 @@
+.tab-complete {
+  background-color: #320064;
+  width: 75vw;
+  height: 60vh;
+  border: 3px solid;
+  display: inline-block;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.tab {
+  flex: 1;
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0;
+  text-align: center;
+  border: 1px solid #320064;
+}
+
+.tab:first-child {
+  border-top-left-radius: 5px; /* Optional: Round the left corners */
+}
+
+.tab:last-child {
+  border-top-right-radius: 5px; /* Optional: Round the right corners */
+}
+
+.tab:hover {
+  background-image: linear-gradient(to right, #ff0080, #8e2de2);
+}
+
+.tab-content {
+  padding: 5px;
+  background-color: #2e2e2e;
+  height: 100%;
+}
+
+h2, h3, h4, h1 {
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #8e2de2;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Floating Skill Divs using Flexbox */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;  /* You can adjust this as per your need */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  border: 1px #ff0080 solid;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.slider80 {
+  appearance: none;
+  background: linear-gradient(to right, #ff0080 80%, #ddd 80%);
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.slider80::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff0080;
+  border-radius: 50%;
+}
+
+.slider60 {
+  appearance: none;
+  background: linear-gradient(to right, #ff0080 60%, #ddd 60%);
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.slider60::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff0080;
+  border-radius: 50%;
+}
+
+small {
+  color: #ccc;
+}
+
+.skills-header{
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.skills-section {
+  max-height: 90%;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-behavior: smooth;
+
+}
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab.active {
+  background-image: linear-gradient(to right, #ff0080, #8e2de2);
+  color: #fff;
+  font-weight: bold;
+}
+
+
+/* New styles for Personal Skills section */
+.personal-skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%; /* Adjust as needed */
+}
+
+.column {
+  flex: 1;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.column h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  background: #8e2de2;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.column ul li:hover {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .personal-skills {
+    flex-direction: column;
+  }
+
+  .column {
+    margin-bottom: 20px;
+  }
+}
+
