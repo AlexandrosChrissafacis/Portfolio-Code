@@ -163,14 +163,35 @@
   cursor: pointer;
 }
 
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #320064;
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #ff0080;
+  backdrop-filter: blur(6px); /* Subtle frosted glass effect */
+}
+
 #AC {
   color: white;
   margin-left: 30px
 }
+
 mat-toolbar {
   background-color: #320064;
   color: white;
+
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 mat-button {
    color: white;
  }
@@ -223,8 +244,10 @@ mat-button {
 
     flex-direction: column;
     width: 100%;
-    padding: 10px;
-    margin-top: 0;
+    padding: 0;
+    margin-top: 67px;
+    margin-bottom: 0;
+    height: 90vh;
   }
 
   .project-title {

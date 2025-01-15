@@ -63,7 +63,34 @@
 
 .social-links {
   display: flex;
-  gap: 20px;
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Add spacing between each social item */
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the icon and username */
+}
+
+.social-username {
+  font-size: 1rem;
+  color: white;
+}
+
+.additional-info {
+  font-size: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.additional-info a {
+  color: #8e2de2;
+  text-decoration: none;
+}
+
+.additional-info a:hover {
+  text-decoration: underline;
 }
 
 .social-links a {
@@ -118,6 +145,10 @@
   .social-links {
     justify-content: center;
     gap: 10px;
+  }
+
+  .additional-info {
+    display: none;
   }
 }
 

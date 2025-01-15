@@ -5,7 +5,7 @@
 
 .projects-header {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   color: #fff;
 }
 
@@ -111,6 +111,14 @@
   transform: translateY(-50%);
 }
 
+.subtitle{
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 @media (max-width: 768px) {
   .carousel-button {
     display: none;
@@ -170,5 +178,31 @@
   .tech-tag {
     font-size: 0.6rem;
     padding: 2px 4px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .projects-cards {
+    gap: 40px;
+    width: 100vw;
+  }
+
+  .project-card {
+    width: 600px;
+
+    padding: 20px;
+  }
+
+  .project-image {
+    max-height: 300px;
+  }
+
+  .tech-tag {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .projects-container {
+    width: 60vw;
   }
 }

@@ -72,7 +72,7 @@ mat-button {
   }
 }
 
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (orientation: landscape) and (max-height: 500px) {
   #landscape-lock {
     display: flex;
     position: fixed;

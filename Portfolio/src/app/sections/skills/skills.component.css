@@ -79,6 +79,7 @@ ul li {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
   border: 1px #ff0080 solid;
+  margin-bottom: 10px;
 }
 
 .skill:hover {
@@ -132,7 +133,6 @@ small {
   overflow-y: auto;
   padding-right: 10px;
   scroll-behavior: smooth;
-
 }
 
 .tab-content {
@@ -191,6 +191,10 @@ small {
   border-radius: 5px;
   color: #fff;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .column ul li:hover {
@@ -199,13 +203,38 @@ small {
   transform: scale(1.05);
 }
 
+.column ul li svg{
+  margin-right: 10px;
+  flex-shrink: 0;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+.column ul li img{
+  margin-right: 10px;
+  flex-shrink: 0;
+  width: 32px;
+  height: 24px;
+}
+
+.column ul li p{
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   .personal-skills {
     flex-direction: column;
   }
 
   .column {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+  }
+
+  .tab-complete {
+    width: 90vw;
+    height: 80vh;
   }
 }
 
